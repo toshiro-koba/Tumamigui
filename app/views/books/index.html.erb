@@ -26,4 +26,7 @@
 
 <br>
 
-<%= link_to 'New Book', new_book_path %>
+<div class="book__hover-action">
+  <span class='book-btn__normal'>フォロー</span>
+  <span><%= link_to 'フォロー', new_book_path, class: 'book-btn__hover' %></span>
+</div>
