@@ -1,0 +1,23 @@
+.book-btn__normal {
+  border: 2px solid #ccc;
+  background-color: #ffffff;
+  color: rgb(29, 161, 242);
+  border-color: rgb(29, 161, 242);
+}
+
+.book__hover-action .book-btn__hover {
+  display: none;
+}
+
+.book__hover-action:hover .book-btn__normal {
+  display: none;
+}
+
+.book__hover-action:hover .book-btn__hover {
+  display: inline;
+  background-color: rgba(29, 161, 242, 0.1);
+  border: 2px solid #ccc;
+  color: rgb(29, 161, 242);
+  border-color: rgb(29, 161, 242);
+  text-decoration: none;
+}
