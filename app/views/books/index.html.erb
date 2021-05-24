@@ -27,6 +27,13 @@
 <br>
 
 <div class="book__hover-action">
-  <span class='book-btn__normal'>フォロー</span>
-  <span><%= link_to 'フォロー', new_book_path, class: 'book-btn__hover' %></span>
+  <span class='book-btn__normal'>登録する</span>
+  <span><%= link_to '登録する', new_book_path, class: 'book-btn__hover' %></span>
 </div>
+
+<hr>
+<%= form_with url: books_path, method: :get do |form| %> <%# getのとこいる？ %>
+  <%= form.check_box :title, {multiple: true}, checked_value = 'zutomayo' %> <%# valueに0含まれるのなんでだ %>
+  <%= form.check_box :title, {multiple: true}, checked_value = 'ztmy' %>
+  <%= form.submit %>
+<% end %>
