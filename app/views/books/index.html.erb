@@ -33,7 +33,7 @@
 
 <hr>
 <%= form_with url: books_path, method: :get do |form| %> <%# getのとこいる？ %>
-  <%= form.check_box :title, {multiple: true}, checked_value = 'zutomayo' %> <%# valueに0含まれるのなんでだ %>
-  <%= form.check_box :title, {multiple: true}, checked_value = 'ztmy' %>
+  <%= form.check_box :title, {multiple: true}, checked_value = 'zutomayo', nil %>
+  <%= form.check_box :title, {multiple: true}, checked_value = 'ztmy', nil %>
   <%= form.submit %>
 <% end %>

@@ -5,7 +5,6 @@ class BooksController < ApplicationController
   # GET /books.json
   def index
     @books = Book.all
-    binding.irb
   end
 
   # GET /books/1
