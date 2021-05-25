@@ -25,15 +25,53 @@
   = form.submit
 
 %hr/
+- words = %w[ずとまよ うにぐり 温れ落ち度]
 
+= form_with url: books_path, method: :get do |form|
+  %table{:border => 1}
+    %thead
+      %tr
+        %th id
+        %th title
+        %th 🦔
+    %tbody
+      - words.each.with_index(1) do |word, index|
+        %tr
+          %td=index
+          %td=word
+          %td= form.check_box :title, {multiple: true}, checked_value = word, nil
+  = form.submit value: '更新'
+
+
+%hr/
 %table{:border => 1}
   %thead
     %tr
       %th id
       %th title
       %th 🦔
-  %tbody
-    - %w[ずとまよ うにぐり 温れ落ち度].each.with_index(1) do |word, index|
+  = form_with url: books_path, method: :get do |form|
+    %tbody
+      - words.each.with_index(1) do |word, index|
+        %tr
+          %td=index
+          %td=word
+          %td= form.check_box :title, {multiple: true}, checked_value = word, nil
+    = form.submit value: '更新2'
+
+%hr/
+%table.table
+  = form_with url: books_path, method: :get do |form|
+    %thead
       %tr
-        %td=index
-        %td{:colspan => 2}=word
+        %th id
+        %th title
+        %th 🦔
+    %tbody.tabletest
+      - words.each.with_index(1) do |word, index|
+        %tr.table-row
+          %td.table-data.table-border=index
+          %td.table-data=word
+          %td.table-data= form.check_box :title, {multiple: true}, checked_value = word, nil
+    = form.submit value: '更新3'
+
