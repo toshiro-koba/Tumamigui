@@ -1,6 +1,6 @@
 %p#notice= notice
 %h1 Books
-%table
+%table{:border => "1"}
   %thead
     %tr
       %th Title
@@ -23,3 +23,17 @@
   = form.check_box :title, {multiple: true}, checked_value = 'zutomayo', nil
   = form.check_box :title, {multiple: true}, checked_value = 'ztmy', nil
   = form.submit
+
+%hr/
+
+%table{:border => 1}
+  %thead
+    %tr
+      %th id
+      %th title
+      %th 🦔
+  %tbody
+    - %w[ずとまよ うにぐり 温れ落ち度].each.with_index(1) do |word, index|
+      %tr
+        %td=index
+        %td{:colspan => 2}=word
