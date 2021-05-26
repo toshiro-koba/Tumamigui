@@ -72,6 +72,5 @@
         %tr.table-row
           %td.table-data.table-border=index
           %td.table-data=word
-          %td.table-data= form.check_box :title, {multiple: true}, checked_value = word, nil
+          %td.table-data= form.check_box :title_checkbox, {multiple: true, checked: checked?(word)}, checked_value = word, nil
     = form.submit value: '更新3'
-
