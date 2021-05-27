@@ -73,6 +73,6 @@
           %td.table-data.table-border=index
           %td.table-data=word
           %td.table-data
-            %label.label-checkbox{for: word}
+            = form.label nil, for: word, class: 'label-checkbox' do
               = form.check_box :title_checkbox, {multiple: true, checked: checked?(word), id: word}, checked_value = word, nil
     = form.submit value: '更新3'
