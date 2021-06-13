@@ -21,3 +21,24 @@
   border-color: rgb(29, 161, 242);
   text-decoration: none;
 }
+
+.table {
+  background-color: rgb(247, 140, 238);
+}
+
+.table-border{
+  border: 3px outset black;
+}
+
+.table-row:nth-child(odd) {
+  background-color: chartreuse;
+}
+
+.label-checkbox {
+  display: block;
+  padding: 1px;
+}
+
+.table-data:nth-child(odd) {
+  background-color: aquamarine;
+}
